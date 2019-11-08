@@ -22,7 +22,7 @@ class ApplicationController < ActionController::API
   end
 
   def signing_secret
-    byebug
+    # byebug
     ENV["JWT_SECRET_KEY"]
   end
 end
