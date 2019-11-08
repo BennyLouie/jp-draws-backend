@@ -37,6 +37,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_model_serializers (0.10.10)
+      actionpack (>= 4.1, < 6.1)
+      activemodel (>= 4.1, < 6.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (6.0.1)
       activesupport (= 6.0.1)
       globalid (>= 0.3.6)
@@ -45,6 +50,7 @@ GEM
     activerecord (6.0.1)
       activemodel (= 6.0.1)
       activesupport (= 6.0.1)
+    activerecord-reset-pk-sequence (0.2.1)
     activestorage (6.0.1)
       actionpack (= 6.0.1)
       activejob (= 6.0.1)
@@ -61,6 +67,8 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
+    case_transform (0.2)
+      activesupport
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     erubi (1.9.0)
@@ -69,6 +77,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
+    jsonapi-renderer (0.2.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -151,6 +160,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
+  activerecord-reset-pk-sequence (~> 0.2.0)
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
