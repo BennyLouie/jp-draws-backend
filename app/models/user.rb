@@ -1,7 +1,10 @@
 class User < ApplicationRecord
     has_secure_password
     has_many :transactions, dependent: :destroy
-    has_many :drawings, through: :transactions
+    has_many :drawings, -> { order(name: :asc) }, through: :transactions
+
+    validates_presence_of :username
+    validates_uniqueness_of :username, :case_sensitive => false
 
     def password=(new_password)
         salt = BCrypt::Engine::generate_salt

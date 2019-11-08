@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::API
-    private
+
+  
+  private
 
   def create_token(user_id)
     JWT.encode({ user_id: user_id }, signing_secret, 'HS256')
