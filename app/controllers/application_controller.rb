@@ -20,7 +20,6 @@ class ApplicationController < ActionController::API
   end
 
   def signing_secret
-    # ENV["BANANA"]
-    ENV["JWT_SECRET_KEY"]
+    ENV["signing_key"]
   end
 end
