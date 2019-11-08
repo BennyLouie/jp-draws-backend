@@ -15,4 +15,7 @@ class User < ApplicationRecord
         return nil unless (salt + hashed) == self.password_digest
     end
 
+    def full_name
+        "#{self.first_name} #{self.last_name}"
+    end
 end
